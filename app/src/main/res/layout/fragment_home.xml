@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/darkBackground"
+    android:gravity="center"
+    tools:context=".Activities.MainActivity">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="15dp"
+        >
+        <!--        android:layout_marginHorizontal="10dp"-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MONDAY"
+                style="@style/LargeText"
+                android:id="@+id/weekId"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aug 12"
+                style="@style/MediumText"
+                android:id="@+id/dayId"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:icon="@drawable/ic_add"
+            app:cornerRadius="60dp"
+            android:id="@+id/createBtn"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/home_layout"
+        tools:context=".Activities.MainActivity"
+
+        android:padding="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans_black"
+            android:text="Tasks"
+            style="@style/MediumText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/taskRecyclerView"
+            />
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/item_background"
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createNewBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create New Task"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textStart"
+            app:cornerRadius="30dp"
+            android:paddingHorizontal="1dp"
+            android:paddingVertical="15dp"
+            style="@style/MediumText"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

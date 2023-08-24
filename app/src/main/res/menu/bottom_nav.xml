@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Go"
+        android:icon="@drawable/round_play_circle_24"
+        />
+    <item android:icon="@drawable/round_calendar_month_24"
+        android:id="@+id/history"
+        android:title="Histroy"
+        />
+    <item android:icon="@drawable/round_person_24"
+        android:id="@+id/me"
+        android:title="Me"
+        />
+</menu>

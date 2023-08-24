@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.TaskActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:weightSum="2">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                style="@style/MediumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:text="Task"
+                android:id="@+id/taskName"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="2"
+                android:background="@color/background"
+                android:src="@drawable/ic_vol" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LargeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Total Time"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/clockTextView"
+                style="@style/LargeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sub_item"
+                android:paddingHorizontal="5dp"
+                android:text="05:45" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="50dp"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="280dp"
+                android:layout_height="280dp">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/yourCircularProgressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cpb_background_progressbar_color="@color/darkBlue"
+                    app:cpb_background_progressbar_width="20dp"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progressbar_color="@color/blue"
+                    app:cpb_progressbar_width="20dp"
+                    app:cpb_round_border="true" />
+                <!--progress bar implementation-->
+                <!--        <ProgressBar-->
+                <!--            android:id="@+id/progress_bar"-->
+                <!--            style="?android:attr/progressBarStyleHorizontal"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="match_parent"-->
+                <!--            android:background="@drawable/circular_shape"-->
+
+                <!--            android:indeterminate="false"-->
+                <!--            android:progressDrawable="@drawable/circular_progress_bar"-->
+                <!--            android:textAlignment="center" />-->
+
+                <!--Text implementation in center of the progress bar-->
+                <TextView
+                    android:id="@+id/progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="68sp"
+                    android:textStyle="bold" />
+
+                <nl.dionsegijn.konfetti.xml.KonfettiView
+                    android:id="@+id/konfettiView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pp"
+            style="@style/MediumText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="1dp"
+            android:paddingVertical="20dp"
+            android:text="Pause"
+            app:cornerRadius="30dp"
+            app:icon="@drawable/ic_pause"
+            app:iconGravity="textStart" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reset"
+            style="@style/MediumText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="1dp"
+            android:paddingVertical="20dp"
+            android:text="Reset"
+            app:backgroundTint="@color/background"
+            app:cornerRadius="30dp"
+            app:icon="@drawable/ic_restart"
+            app:iconGravity="textStart" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

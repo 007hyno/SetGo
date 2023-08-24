@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit Workout?"
+        android:textColor="@android:color/white"
+        style="@style/LargeText"
+        android:layout_gravity="start"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your progress will not be saved if you quit right now."
+        style="@style/SmallText"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:weightSum="1"
+        android:paddingLeft="40dp"
+
+        >
+
+        <TextView
+            android:id="@+id/btnYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Quit"
+            android:gravity="end"
+
+            style="@style/MediumText"
+            android:textColor="@color/pink"
+            android:backgroundTint="@color/secondary"
+            />
+
+        <TextView
+            android:id="@+id/btnNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Continue"
+            android:gravity="end"
+            android:layout_marginLeft="20dp"
+            style="@style/MediumText"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/transparent"/>
+
+    </LinearLayout>
+</LinearLayout>

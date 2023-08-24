@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    android:padding="18dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do you want to exit?"
+        android:textColor="@android:color/white"
+        style="@style/LargeText"
+        android:layout_gravity="start"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to exit?"
+        style="@style/SmallText"
+        android:textColor="@android:color/white"
+        android:layout_gravity="start"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:weightSum="1"
+        android:paddingLeft="40dp"
+        >
+
+        <TextView
+            android:id="@+id/btnYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Exit"
+            android:gravity="end"
+            style="@style/MediumText"
+            android:textColor="@color/pink"
+            android:backgroundTint="@color/secondary"
+            />
+
+        <TextView
+            android:id="@+id/btnNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:gravity="end"
+            android:layout_marginLeft="20dp"
+            style="@style/MediumText"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/transparent"/>
+
+    </LinearLayout>
+</LinearLayout>

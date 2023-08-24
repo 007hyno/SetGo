@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+        android:id="@+id/ll"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cc"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="vertical"
+            android:background="@drawable/bottom_nav"
+            android:layout_marginHorizontal="20dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/congo"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/secondary"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Well Done"
+            android:background="@color/secondary"
+            android:textColor="@color/white"
+            style="@style/LargeText"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondary"
+            android:textColor="@color/white"
+
+            android:textAlignment="center"
+            android:text="Total Time"
+            style="@style/xSmallText"
+            />
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondary"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:textAlignment="center"
+        android:text="Rate your Workout?"
+        style="@style/LargeText"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/congo_bottom"
+        android:weightSum="3"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😓"
+            android:textSize="50dp"
+            android:layout_weight="1"
+            android:id="@+id/rate1"
+            app:backgroundTint="@color/transparent"
+            style="?android:attr/borderlessButtonStyle"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/secondary"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="  Tired   "
+                style="@style/SmallText"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            >
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🙂"
+            android:textSize="50dp"
+            android:layout_weight="1"
+            android:id="@+id/rate2"
+
+            app:backgroundTint="@color/transparent"
+            style="?android:attr/borderlessButtonStyle"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/secondary"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+
+                android:textAlignment="center"
+                android:text="   Good   "
+                style="@style/SmallText"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            >
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="😁"
+            android:textSize="50dp"
+            android:layout_weight="1"
+            app:backgroundTint="@color/transparent"
+            android:id="@+id/rate3"
+            style="?android:attr/borderlessButtonStyle"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/secondary"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="Energtic"
+                style="@style/SmallText"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

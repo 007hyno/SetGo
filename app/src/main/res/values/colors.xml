@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="transparent">#02FFFFFF</color>
+    <color name="background">#21242B</color>
+    <color name="darkBackground">#121316</color>
+    <color name="textColor">#FFFFFF</color>
+
+    <color name="secondary">#313746</color>
+    <color name="lightSecondary">#42495A</color>
+    <color name="secondaryText">#A1A4AD</color>
+    <color name="darkBlue">#1A1D22</color>
+    <color name="blue">#417FFF</color>
+    <color name="pink">#F02940</color>
+</resources>
