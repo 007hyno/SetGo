@@ -57,7 +57,7 @@
         android:orientation="vertical"
         android:background="@drawable/home_layout"
         tools:context=".Activities.MainActivity"
-
+        android:weightSum="3"
         android:padding="15dp"
         >
 
@@ -74,15 +74,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="500dp">
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/taskRecyclerView"
+            android:layout_weight="3"
             />
-        </ScrollView>
+
 
         <View
             android:layout_width="match_parent"
@@ -96,11 +94,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Create New Task"
+            android:layout_weight="1"
             app:icon="@drawable/ic_add"
             app:iconGravity="textStart"
             app:cornerRadius="30dp"
             android:paddingHorizontal="1dp"
             android:paddingVertical="15dp"
+            android:layout_marginBottom="10dp"
             style="@style/MediumText"
             />
 

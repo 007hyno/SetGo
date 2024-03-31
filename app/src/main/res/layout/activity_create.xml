@@ -27,16 +27,18 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:id="@+id/taskNameCont"
     >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:padding="22dp"
+                android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/taskName"
-                android:inputType="text"
+                android:inputType="textCapSentences"
                 android:maxLines="1"
                 android:textSize="20dp"
+                android:textStyle="bold"
                 android:hint="Enter Task Name"
                 />
 <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
@@ -64,8 +66,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@drawable/item_background"
+                android:layout_height="60dp"
+                android:background="@drawable/create_button_background_strips"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 android:weightSum="5"
@@ -125,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="Reps"
+                    android:text="Duration of Single Set"
                     style="@style/SmallText"
                     />
                 <ImageButton
@@ -138,82 +140,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@drawable/item_background"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                android:weightSum="5"
-                android:gravity="center"
-                >
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:icon="@drawable/ic_minus"
-                    android:background="@drawable/left_btn_rounded"
-                    android:layout_margin="0dp"
-                    app:cornerRadius="10dp"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:layout_weight="1"
-                    app:backgroundTint="@color/lightSecondary"
-                    android:id="@+id/repDec"
-
-                    app:iconGravity="textStart"
-                    app:iconPadding="0dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="3"
-                    android:id="@+id/rep"
-                    android:textAlignment="center"
-                    style="@style/LargeText"
-
-                    />
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:icon="@drawable/ic_add"
-                    android:background="@drawable/right_btn_rounded"
-                    android:layout_margin="0dp"
-                    app:cornerRadius="10dp"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:layout_weight="1"
-                    android:id="@+id/repInc"
-                    app:backgroundTint="@color/lightSecondary"
-                    app:iconGravity="textStart"
-                    app:iconPadding="0dp"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="Duration per Rep"
-                    style="@style/SmallText"
-                    />
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_info"
-                    android:background="@color/background"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@drawable/item_background"
+                android:layout_height="60dp"
+                android:background="@drawable/create_button_background_strips"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 android:id="@+id/notification"
@@ -277,7 +205,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="Rest"
+                    android:text="Rest Duration"
                     style="@style/SmallText"
                     />
                 <ImageButton
@@ -290,8 +218,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@drawable/item_background"
+                android:layout_height="60dp"
+                android:background="@drawable/create_button_background_strips"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 android:weightSum="5"
@@ -455,6 +383,7 @@
                 android:layout_height="wrap_content"
                 android:text="Save"
                 app:cornerRadius="30dp"
+                android:textAllCaps="false"
                 android:paddingHorizontal="1dp"
                 android:paddingVertical="20dp"
                 style="@style/MediumText"

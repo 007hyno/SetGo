@@ -65,6 +65,27 @@ public class dbHelper extends SQLiteOpenHelper {
 
         db.insert(Constants.TABLE_NAME1, null, taskItem);
     }
+
+    public void updateTaskItem(String name,TaskItemModel data){
+        ContentValues taskItem = new ContentValues();
+        taskItem.put(Constants.ROW_TASK_NAME, data.getTaskName());
+        taskItem.put(Constants.ROW_TOTAL_DURATION, data.getTotalDuration());
+        taskItem.put(Constants.ROW_SETS, data.getSets());
+        taskItem.put(Constants.ROW_REPS, data.getReps());
+        taskItem.put(Constants.ROW_DURATION, data.getDuration());
+        taskItem.put(Constants.ROW_REST, data.getRest());
+        taskItem.put(Constants.ROW_DATE, data.getDate());
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String whereClause = Constants.ROW_TASK_NAME + " = ?";
+            String[] whereArgs = {name}; // Replace with the appropriate identifier (e.g., task name)
+
+        int numRowsUpdated = db.update(Constants.TABLE_NAME1, taskItem, whereClause, whereArgs);
+
+        db.close();
+    }
+
     public void insertHistoryItem(HistoryItemModel data){
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -80,6 +101,26 @@ public class dbHelper extends SQLiteOpenHelper {
 
         db.insert(Constants.TABLE_NAME2, null, historyItem);
     }
+    public boolean checkDuplicate(String name){
+        // Define a query to check for duplicate names
+        String query = "SELECT COUNT(*) FROM "+Constants.TABLE_NAME1+" WHERE "+Constants.ROW_TASK_NAME+" = ?";
+
+// Use SQLiteDatabase.rawQuery to execute the query
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] selectionArgs = { name };
+        Cursor cursor = db.rawQuery(query, selectionArgs);
+// Check if there are duplicates
+        if (cursor != null) {
+            cursor.moveToFirst();
+            int count = cursor.getInt(0);
+            cursor.close();
+
+            if (count > 0) {
+                return true;
+            }
+        }
+                return false;
+    }
 
     public ArrayList<TaskItemModel> retrieveTaskItem(){
         SQLiteDatabase db = this.getReadableDatabase();
@@ -87,7 +128,7 @@ public class dbHelper extends SQLiteOpenHelper {
 
         ArrayList<TaskItemModel> taskArray = new ArrayList<>();
         while (cursor.moveToNext()){
-                taskArray.add(new TaskItemModel(cursor.getString(1),cursor.getString(2),cursor.getInt(3),cursor.getInt(4),cursor.getLong(5),cursor.getLong(6),cursor.getLong(7) ));
+                taskArray.add(new TaskItemModel(cursor.getString(1),cursor.getString(2),cursor.getInt(3),cursor.getInt(4),cursor.getLong(5),cursor.getString(6),cursor.getLong(7) ));
         }
         return taskArray;
     }
@@ -114,5 +155,17 @@ public class dbHelper extends SQLiteOpenHelper {
 
     }
 
+    public void deleteTask(String name){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+// Define the DELETE query with a WHERE clause
+        String deleteQuery = "DELETE FROM "+Constants.TABLE_NAME1+" WHERE "+Constants.ROW_TASK_NAME+" = ?";
+
+// Execute the DELETE query with the specified name as a parameter
+        db.execSQL(deleteQuery, new String[]{name});
+
+// Close the database connection
+        db.close();
+    }
 
 }

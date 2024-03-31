@@ -15,5 +15,6 @@
     <color name="secondaryText">#A1A4AD</color>
     <color name="darkBlue">#1A1D22</color>
     <color name="blue">#417FFF</color>
+    <color name="orange">#FFB941</color>
     <color name="pink">#F02940</color>
 </resources>

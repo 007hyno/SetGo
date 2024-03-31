@@ -1,11 +1,11 @@
 package com.paras.setgo.Models;
 
 public class TaskItemModel {
-    private String taskName,totalDuration;
+    private String taskName,totalDuration,rest;
     private Integer sets,reps;
-    private Long duration,rest,date;
+    private Long duration,date;
 
-    public TaskItemModel(String taskName, String totalDuration, Integer sets, Integer reps, Long duration, Long rest,Long date) {
+    public TaskItemModel(String taskName, String totalDuration, Integer sets, Integer reps, Long duration, String rest,Long date) {
         this.taskName = taskName;
         this.totalDuration = totalDuration;
         this.sets = sets;
@@ -35,7 +35,7 @@ public class TaskItemModel {
         return duration;
     }
 
-    public Long getRest() {
+    public String getRest() {
         return rest;
     }
     public Long getDate() {
@@ -62,7 +62,7 @@ public class TaskItemModel {
         this.duration = duration;
     }
 
-    public void setRest(Long rest) {
+    public void setRest(String rest) {
         this.rest = rest;
     }
     public void setDate(Long date) {

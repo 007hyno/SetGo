@@ -15,11 +15,13 @@
         style="@style/LargeText"
         android:layout_gravity="start"/>
     <TextView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your progress will not be saved if you quit right now."
-        style="@style/SmallText"
+        style="@style/MediumText"
+        android:fontFamily="@font/hind_semibold"
+        android:textStyle="normal"
         android:textColor="@android:color/white"
         android:layout_gravity="center"/>
 
